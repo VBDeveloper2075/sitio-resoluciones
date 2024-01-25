@@ -6,12 +6,15 @@ body {
   line-height: 1.5;
 }
 
+h2 {
+  color:#7f7fd5;
+  font-weight: 400;
+}
+
+/* --------  SECCION HEADER -------- */
 .logo {
   border-radius: 50%;
-  height: 140px;
-  width: 140px;
-  padding: 0 10px;
-  
+  height: 100px;
 }
 
 header {
@@ -28,17 +31,19 @@ header {
     #86a8e7,
     #7f7fd5
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 140px;
-  padding: 50px 0;
+  height: 100px;
+  padding: 10px 0;
 }
 
 header .logo {
   float: left;
+  display: flex;
+  align-items: center;
 }
 
 header h1 {
   color: #fff;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 100;
   font-style: italic;
   display: inline-block;
@@ -46,6 +51,7 @@ header h1 {
   margin-left: 30px;
 }
 
+/* --------  SECCION NAV -------- */
 nav {
   background-color: #7f7fd5;
   margin-bottom: 20px;
@@ -56,16 +62,78 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-around;
-  padding: 3px;
 }
 
-nav a {
+nav ul li {
+  flex-grow: 1;
+}
+
+nav ul li a {
   text-decoration: none;
   color: #fff;
+  padding: 3px 6px;
+  /* para que queden centrados y con padding display block */
+  display: block;
+  text-align: center;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
   background-color: rgba(0, 0, 0, 0.3);
-  
+}
+
+nav ul li a.active {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* --------  SECCION INICIO Home -------- */
+
+.bienvenidos {
+  width: 75%;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.columnas {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nosotros {
+  background-color: #f2e3f0;
+  padding: 16px;
+}
+
+.consultanos .cita {
+  font-weight: bold;
+  font-style: 10 px;
+  font-size: 22px;
+  display: block;
+}
+
+.consultanos .autor {
+  font-size: 10px;
+  text-align: center;
+  margin: 12px 0;
+}
+
+main img {
+  width: 100%;
+  height: auto;
+}
+
+/* --------  SECCION FOOTER -------- */
+
+footer {
+  background-color: #7f7fd5;
+  clear: both;
+  padding: 5px 0;
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
