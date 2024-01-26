@@ -7,7 +7,7 @@ body {
 }
 
 h2 {
-  color:#7f7fd5;
+  color: #7f7fd5;
   font-weight: 400;
 }
 
@@ -100,13 +100,14 @@ nav ul li a.active {
 
 .nosotros {
   background-color: #f2e3f0;
+  width: 25%;
   padding: 16px;
 }
 
 .consultanos .cita {
   font-weight: bold;
   font-style: 10 px;
-  font-size: 22px;
+  font-size: 16px;
   display: block;
 }
 
@@ -136,4 +137,111 @@ holder {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+/* --------  hoja RESOLUCIONES -------- */
+
+.reso{
+  text-align: center;
+}
+
+.cuil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cuil input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  margin-bottom: 20px; /* Agrega un margen inferior para separar el input de los botones */
+
+}
+
+.cuil #cuilMessage {
+  margin-top: 5px;
+  font-size: 12px;
+  color: red;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-container button {
+  margin: 0 10px;
+}
+
+.cuil button {
+  background-color: #7f7fd5;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.cuil button:hover {
+  background-color: #595997;
+}
+
+/* --------  SECCION CONTACTO -------- */
+.contacto {
+  display: flex;
+  gap: 24px;
+}
+
+.contacto div {
+  width: 100%;
+}
+
+.datos p {
+  font-size: 14px;
+}
+
+.datos ul li {
+  font-size: 13px;
+}
+
+.formulario p {
+  display: flex;
+}
+
+.formulario p label {
+  min-width: 80px;
+}
+
+.formulario p input, .formulario p textarea {
+  width: 100%;
+  background: #ddd;
+  border-radius: 5p;
+  border: 1px solid #999;
+  font-size: 14px;
+  padding: 6px 10px;
+}
+
+/* para que no se agrande de cualquier forma el textarea lo limito y cuando se pasa del borde aparece el scroll por defecto y se puede seguir escribiendo igual */
+
+.formulario textarea{
+  resize: none;
+  height: 150px;
+}
+
+.button-enviar {
+  background-color: #7f7fd5;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.button-enviar:hover {
+  background-color: #595997;
 }
