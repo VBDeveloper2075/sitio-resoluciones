@@ -89,16 +89,18 @@ nav ul li a.active {
 
 .bienvenidos {
   width: 75%;
-  padding-right: 10px;
+  padding: 20px;
   box-sizing: border-box;
 }
 
-.columnas {
+.contactos {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-.nosotros {
+.novedades {
   background-color: #f2e3f0;
   width: 25%;
   padding: 16px;
@@ -240,8 +242,13 @@ holder {
   font-size: 16px;
   cursor: pointer;
   box-sizing: border-box;
+  margin-left: 80px;
 }
 
 .button-enviar:hover {
   background-color: #595997;
 }
+
+
+/* --------  SECCION NOVEDADES -------- */
+
