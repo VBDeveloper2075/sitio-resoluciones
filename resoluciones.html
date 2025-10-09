@@ -31,14 +31,15 @@
     <main class="holder">
       <h2 class="reso">Aquí puede ver y descargar sus Resoluciones</h2>
       <div class="cuil">
-        <input type="number" id="cuilInput" placeholder="Ingrese su CUIL" />
-        <div id="cuilMessage" style="display: none">
-          Por favor, ingrese un CUIL válido de 11 números.
+        <input type="number" id="dniInput" placeholder="Ingrese su DNI" />
+        <div id="dniMessage" style="display: none">
+          Por favor, ingrese un DNI válido de 7 u 8 dígitos.
         </div>
         <div class="button-container">
-          <button onclick="validarCUIL()">Enviar</button>
+          <button onclick="validarDNI()">Enviar</button>
           <button onclick="resetearFormulario()">Reset</button>
         </div>
+        <div id="resultado"></div>
       </div>
     </main>
     <footer>
@@ -47,6 +48,40 @@
         Diseño VBar
       </p>
     </footer>
+    <script>
+      window.resolucionesPorDni = {
+        "25523186": "https://drive.google.com/file/d/1uRcr4YNp4z7rhBN3csuHrxClymkMhyJ6/view?usp=drive_link",
+        "27919794": "https://drive.google.com/file/d/1uRcr4YNp4z7rhBN3csuHrxClymkMhyJ6/view?usp=drive_link",
+        "28304282": "https://drive.google.com/file/d/1uRcr4YNp4z7rhBN3csuHrxClymkMhyJ6/view?usp=drive_link",
+        "27966756": "https://drive.google.com/file/d/1uRcr4YNp4z7rhBN3csuHrxClymkMhyJ6/view?usp=drive_link",
+        "26230462": "https://drive.google.com/file/d/1uRcr4YNp4z7rhBN3csuHrxClymkMhyJ6/view?usp=drive_link",
+        "22591053": "https://drive.google.com/file/d/1uRcr4YNp4z7rhBN3csuHrxClymkMhyJ6/view?usp=drive_link",
+        "22060140": "https://drive.google.com/file/d/1uRcr4YNp4z7rhBN3csuHrxClymkMhyJ6/view?usp=drive_link",
+        "21728848": "https://drive.google.com/file/d/1uRcr4YNp4z7rhBN3csuHrxClymkMhyJ6/view?usp=drive_link",
+        "18252047": "https://drive.google.com/file/d/1YXakdLw9LTyrwiehz1l_aI4U3FT6V5BE/view?usp=drive_link",
+        "14163535": "https://drive.google.com/file/d/1YXakdLw9LTyrwiehz1l_aI4U3FT6V5BE/view?usp=drive_link",
+        "20051718": "https://drive.google.com/file/d/1YXakdLw9LTyrwiehz1l_aI4U3FT6V5BE/view?usp=drive_link",
+        "22230882": "https://drive.google.com/file/d/1YXakdLw9LTyrwiehz1l_aI4U3FT6V5BE/view?usp=drive_link",
+        "25431573": "https://drive.google.com/file/d/1YXakdLw9LTyrwiehz1l_aI4U3FT6V5BE/view?usp=drive_link",
+        "20684602": "https://drive.google.com/file/d/1YXakdLw9LTyrwiehz1l_aI4U3FT6V5BE/view?usp=drive_link",
+        "26666681": "https://drive.google.com/file/d/1YXakdLw9LTyrwiehz1l_aI4U3FT6V5BE/view?usp=drive_link",
+        "12966214": "https://drive.google.com/file/d/1YXakdLw9LTyrwiehz1l_aI4U3FT6V5BE/view?usp=drive_link",
+        "24061261": "https://drive.google.com/file/d/1YXakdLw9LTyrwiehz1l_aI4U3FT6V5BE/view?usp=drive_link",
+        "12439616": "https://drive.google.com/file/d/1YXakdLw9LTyrwiehz1l_aI4U3FT6V5BE/view?usp=drive_link",
+        "20055826": "https://drive.google.com/file/d/1YXakdLw9LTyrwiehz1l_aI4U3FT6V5BE/view?usp=drive_link",
+        "13501433": "https://drive.google.com/file/d/1YXakdLw9LTyrwiehz1l_aI4U3FT6V5BE/view?usp=drive_link",
+        "21588427": "https://drive.google.com/file/d/1YXakdLw9LTyrwiehz1l_aI4U3FT6V5BE/view?usp=drive_link",
+        "23833653": "https://drive.google.com/file/d/1YXakdLw9LTyrwiehz1l_aI4U3FT6V5BE/view?usp=drive_link",
+        "25871671": "https://drive.google.com/file/d/1YXakdLw9LTyrwiehz1l_aI4U3FT6V5BE/view?usp=drive_link",
+        "18428404": "https://drive.google.com/file/d/1YXakdLw9LTyrwiehz1l_aI4U3FT6V5BE/view?usp=drive_link",
+        "20455423": "https://drive.google.com/file/d/1YXakdLw9LTyrwiehz1l_aI4U3FT6V5BE/view?usp=drive_link",
+        "17304286": "https://drive.google.com/file/d/1YXakdLw9LTyrwiehz1l_aI4U3FT6V5BE/view?usp=drive_link",
+        "24796041": "https://drive.google.com/file/d/1YXakdLw9LTyrwiehz1l_aI4U3FT6V5BE/view?usp=drive_link",
+        "21981482": "https://drive.google.com/file/d/1YXakdLw9LTyrwiehz1l_aI4U3FT6V5BE/view?usp=drive_link",
+        "26229658": "https://drive.google.com/file/d/1YXakdLw9LTyrwiehz1l_aI4U3FT6V5BE/view?usp=drive_link",
+        "17231592": "https://drive.google.com/file/d/1YXakdLw9LTyrwiehz1l_aI4U3FT6V5BE/view?usp=drive_link"
+      };
+    </script>
     <script src="js/script.js"></script>
   </body>
 </html>
