@@ -124,6 +124,26 @@ main img {
   height: auto;
 }
 
+/* Margins for main sections */
+main.holder > div {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* Responsive layout: when wider than tablet, split into two columns (50% each) */
+@media (min-width: 769px) {
+  main.holder {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  /* Left: image container. Right: contactos */
+  main.holder > div:first-child,
+  main.holder > .contactos {
+    width: calc(50% - 10px); /* account for 5px margins on both sides */
+  }
+}
+
 /* --------  SECCION FOOTER -------- */
 
 footer {
@@ -162,7 +182,7 @@ holder {
 
 }
 
-.cuil #cuilMessage {
+.cuil #dniMessage {
   margin-top: 5px;
   font-size: 12px;
   color: red;

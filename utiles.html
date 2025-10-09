@@ -34,22 +34,22 @@
       <!-- Contenido de la página de contacto -->
       <div>
         <h2 class="reso">Contacto Rápido</h2>
-        <form action="" method="" class="formulario">
+        <form id="contactoForm" class="formulario">
           <p>
             <label for="nombre">Nombre</label>
-            <input type="text" name="" />
+            <input type="text" id="nombre" name="nombre" required />
           </p>
           <p>
-            <label for="nombre">Email</label>
-            <input type="text" name="" />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
           </p>
           <p>
-            <label for="nombre">Teléfono</label>
-            <input type="text" name="" />
+            <label for="telefono">Teléfono</label>
+            <input type="text" id="telefono" name="telefono" />
           </p>
           <p>
-            <label for="nombre">Mensaje</label>
-            <textarea name=""></textarea>
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
           </p>
           <p>
             <input type="submit" value="Enviar" class="button-enviar" />
@@ -82,5 +82,34 @@
         Diseño VBar
       </p>
     </footer>
+    <script>
+      // Enviar correo usando el cliente de correo del usuario (mailto)
+      (function(){
+        const form = document.getElementById('contactoForm');
+        if (!form) return;
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const nombre = document.getElementById('nombre')?.value.trim() || '';
+          const email = document.getElementById('email')?.value.trim() || '';
+          const telefono = document.getElementById('telefono')?.value.trim() || '';
+          const mensaje = document.getElementById('mensaje')?.value.trim() || '';
+
+          const to = 'consultas@abc.gob.ar';
+          const subject = `Contacto rápido - ${nombre || 'Sin nombre'}`;
+          const bodyLines = [
+            `Nombre: ${nombre}`,
+            `Email: ${email}`,
+            `Teléfono: ${telefono}`,
+            '',
+            'Mensaje:',
+            mensaje
+          ];
+          const body = encodeURIComponent(bodyLines.join('\n'));
+
+          // Abre el cliente de correo del usuario
+          window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${body}`;
+        });
+      })();
+    </script>
   </body>
 </html>
