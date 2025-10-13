@@ -24,12 +24,23 @@
       <ul class="holder">
         <li><a class="activo" href="index.html">Inicio</a></li>
         <li><a href="resoluciones.html">Resoluciones</a></li>
-        <li><a href="insumos.html">Insumos</a></li>
+        <li><a href="disposiciones.html">Disposiciones</a></li>
         <li><a href="utiles.html">Recursos</a></li>
       </ul>
     </nav>
     <main class="holder">
-
+      <h2 class="reso">Aquí puede ver y descargar sus Disposiciones</h2>
+      <div class="cuil">
+        <input type="number" id="dniInput" placeholder="Ingrese su DNI" />
+        <div id="dniMessage" style="display: none">
+          Por favor, ingrese un DNI válido de 7 u 8 dígitos.
+        </div>
+        <div class="button-container">
+          <button onclick="validarDNI()">Enviar</button>
+          <button onclick="resetearFormulario()">Reset</button>
+        </div>
+        <div id="resultado"></div>
+      </div>
     </main>
     <footer>
       <p>
