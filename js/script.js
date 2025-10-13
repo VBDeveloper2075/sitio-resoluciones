@@ -1,8 +1,3 @@
-// Mapa de DNI -> URL de resolución.
-// Reemplaza/actualiza este objeto cuando compartas el JSON de DNIs.
-// También puedes definir window.resolucionesPorDni desde otro script y aquí se tomará automáticamente.
-const resolucionesPorDni = window.resolucionesPorDni || {};
-
 function validarDNI() {
   const dniInput = document.getElementById("dniInput");
   const dniMessage = document.getElementById("dniMessage");
@@ -20,8 +15,8 @@ function validarDNI() {
 
   if (dniMessage) dniMessage.style.display = "none";
 
-  // Buscar la resolución correspondiente
-  const url = resolucionesPorDni[dniRaw];
+  // Buscar la resolución correspondiente usando la función del archivo resoluciones.js
+  const url = window.buscarResolucionPorDNI && window.buscarResolucionPorDNI(dniRaw);
   if (resultado) {
     if (url) {
       resultado.innerHTML = `<a href="${url}" target="_blank" rel="noopener noreferrer">Ver mi resolución</a>`;
