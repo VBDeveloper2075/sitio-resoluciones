@@ -50,6 +50,18 @@ window.resolucionesPorEnlace = {
     "22426962",
     "22128435",
     "16689457"
+  ],
+  "https://drive.google.com/file/d/1HBRgggKRXfLjU3iQJAKzrw8jbrvuzBa_/view?usp=sharing": [
+    "26816394",
+    "17142560"
+  ],
+    "https://drive.google.com/file/d/1uRcr4YNp4z7rhBN3csuHrxClymkMhyJ6/view?usp=drive_link": [
+    "29022859",
+    "23701148",
+    "23178169",
+    "23834442",
+    "23703108",
+    "14895511"
   ]
 };
 
