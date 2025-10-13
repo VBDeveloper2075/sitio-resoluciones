@@ -149,15 +149,34 @@ window.resolucionesPorEnlace = {
     "29575441",
     "20427258",
     "20272501"
+  ],
+  "https://drive.google.com/drive/folders/1XyQpsuPV_L3PwkoxtFbOxi5NX0Dt8zA9?usp=drive_link": [
+    "20576317",
+    "28620548",
+    "31470505",
+    "21588268",
+    "25760872",
+    "25250713",
+    "26849279",
+    "17602921",
+    "20956677",
+    "21388853",
+    "20410086",
+    "12439542",
+    "14617095",
+    "21470100",
+    "13340976",
+    "16850399"
   ]
 };
 
-// Función auxiliar para buscar la URL según el DNI
+// Función auxiliar para buscar TODAS las URLs según el DNI
 window.buscarResolucionPorDNI = function(dni) {
+  const urlsEncontradas = [];
   for (const [url, dnis] of Object.entries(window.resolucionesPorEnlace)) {
     if (dnis.includes(dni)) {
-      return url;
+      urlsEncontradas.push(url);
     }
   }
-  return null;
+  return urlsEncontradas.length > 0 ? urlsEncontradas : null;
 };

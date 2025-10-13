@@ -15,11 +15,18 @@ function validarDNI() {
 
   if (dniMessage) dniMessage.style.display = "none";
 
-  // Buscar la resolución correspondiente usando la función del archivo resoluciones.js
-  const url = window.buscarResolucionPorDNI && window.buscarResolucionPorDNI(dniRaw);
+  // Buscar las resoluciones correspondientes usando la función del archivo resoluciones.js
+  const urls = window.buscarResolucionPorDNI && window.buscarResolucionPorDNI(dniRaw);
   if (resultado) {
-    if (url) {
-      resultado.innerHTML = `<a href="${url}" target="_blank" rel="noopener noreferrer">Ver mi resolución</a>`;
+    if (urls && urls.length > 0) {
+      if (urls.length === 1) {
+        resultado.innerHTML = `<a href="${urls[0]}" target="_blank" rel="noopener noreferrer">Ver mi resolución</a>`;
+      } else {
+        let enlaces = urls.map((url, index) => 
+          `<a href="${url}" target="_blank" rel="noopener noreferrer">Ver resolución ${index + 1}</a>`
+        ).join('<br>');
+        resultado.innerHTML = `<div>Se encontraron ${urls.length} resoluciones:<br>${enlaces}</div>`;
+      }
     } else {
       resultado.innerHTML = "No se encontró resolución para el DNI ingresado.";
     }
