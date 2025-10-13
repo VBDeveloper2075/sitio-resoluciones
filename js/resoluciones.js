@@ -62,6 +62,93 @@ window.resolucionesPorEnlace = {
     "23834442",
     "23703108",
     "14895511"
+  ],
+  "https://drive.google.com/file/d/1Smwd65TEG87uKB5232uJnUqjLi2Fk7my/view?usp=sharing": [
+    "27114222",
+    "22544481"
+  ],
+  "https://drive.google.com/drive/folders/14f1evjGTBGfv-Jf-M2uHt3p0nFcKPpZ7?usp=drive_link": [
+    "23952906",
+    "27312733",
+    "27085243",
+    "27032366",
+    "23075493",
+    "24061535",
+    "33341519",
+    "30755911",
+    "27312733",
+    "29952008"
+  ],
+  "https://drive.google.com/drive/folders/1BfNh0H0Gv3hs-3vVtPXHe-hMpF-Fbk4v?usp=drive_link": [
+    "27935178",
+    "12702940",
+    "13730360",
+    "25654177",
+    "13985346",
+    "13430785"
+  ],
+  "https://drive.google.com/drive/folders/1ahDKIjRf9Wfnzo2SJw3WnTQnnFO0jaOB?usp=drive_link": [
+    "14575940",
+    "24946772",
+    "17231248",
+    "14477587",
+    "27966756",
+    "13132535"
+  ],
+  "https://drive.google.com/drive/folders/1K8WTNjgm0-oeLNJ5fOE-UVL7QbIX-RHk?usp=drive_link": [
+    "16040898",
+    "27777633",
+    "25981768",
+    "12438464",
+    "17739514",
+    "24663053"
+  ],
+  "https://drive.google.com/drive/folders/1L4wil6MX1NB29nvsmUHCChVZ-Ek6XA04?usp=drive_link": [
+    "21480453",
+    "23123150",
+    "22960368",
+    "20727654",
+    "20480614",
+    "20061721",
+    "24882693",
+    "11893998",
+    "16671040",
+    "18595550",
+    "25764378",
+    "23593659",
+    "24795220",
+    "21796975",
+    "21903982",
+    "20592408",
+    "28857288"
+  ],
+  "https://drive.google.com/drive/folders/1ZSljgT5gCZQjMN9zIiJypye8FOntz6lF?usp=drive_link": [
+    "24563406"
+  ],
+  "https://drive.google.com/drive/folders/1aJYbSLcTSy8RfApb8b8gRGS1erf8pbLy?usp=drive_link": [
+    "30226317"
+  ],
+  "https://drive.google.com/drive/folders/1ahDKIjRf9Wfnzo2SJw3WnTQnnFO0jaOB?usp=drive_link": [
+    "20620575"
+  ],
+  "https://drive.google.com/drive/folders/1Zg4wdZKQV28cUGEvnwDViBh-VceQBf9I?usp=drive_link": [
+    "26693579",
+    "32323169"
+  ],
+  "https://drive.google.com/drive/folders/1jVNMibF0cHSsIupDnNAPY8J8675Unf8C?usp=drive_link": [
+    "32323169",
+    "24446352",
+    "18294533",
+    "14284635",
+    "29563538",
+    "21138819",
+    "22885011",
+    "27712851",
+    "24620194",
+    "29563538",
+    "29575441",
+    "20427258",
+    "20272501"
   ]
 };
 
