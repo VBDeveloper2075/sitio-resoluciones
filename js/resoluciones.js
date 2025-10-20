@@ -174,6 +174,15 @@ window.resolucionesPorEnlace = {
     "28589519",
     "14204359",
     "24922193"
+  ],
+  "https://drive.google.com/drive/folders/1yCILEjd8qouLGHl5mgXlLKzoSDF9hSCh?usp=drive_link": [
+    "16930515",
+    "29670853",
+    "24396135",
+    "17881323",
+    "29521663",
+    "29332326",
+    "30994858"
   ]
 };
 
