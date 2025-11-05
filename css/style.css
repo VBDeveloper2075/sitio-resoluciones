@@ -85,6 +85,10 @@ nav ul li a.active {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+nav ul li a.activo {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 /* --------  SECCION INICIO Home -------- */
 
 .bienvenidos {
@@ -223,30 +227,82 @@ holder {
   flex: 1;
 }
 
-/* Sección inferior: 3 columnas (imagen + contactos + novedades) */
+/* Sección inferior: imagen centrada */
 .contactos-inferior {
   display: flex;
-  gap: 20px;
-  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
-.imagen-contacto, .bienvenidos, .novedades {
-  flex: 1;
+.imagen-contacto {
+  max-width: 500px;
+  width: 100%;
 }
 
 .imagen-contacto img {
   width: 100%;
   height: auto;
   border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos existentes mantenidos */
+/* Enlace a cadenas centrado */
+.enlace-cadenas {
+  text-align: center;
+  margin: 30px 0;
+  padding: 20px;
+}
+
+.enlace-cadenas p {
+  margin: 0;
+}
+
+.enlace-cadenas a {
+  color: #7f7fd5;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 30px;
+  border: 2px solid #7f7fd5;
+  border-radius: 8px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.enlace-cadenas a:hover {
+  background-color: #7f7fd5;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(127, 127, 213, 0.3);
+}
+
+/* Mejoras en los estilos existentes */
 .datos p {
   font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.datos ul {
+  list-style: none;
+  padding: 0;
 }
 
 .datos ul li {
   font-size: 13px;
+  margin-bottom: 8px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.datos ul li::before {
+  content: "✉";
+  position: absolute;
+  left: 0;
+  color: #7f7fd5;
+}
+
+.datos ul li strong {
+  color: #555;
 }
 
 .formulario p {
@@ -281,6 +337,7 @@ holder {
   cursor: pointer;
   box-sizing: border-box;
   margin-left: 80px;
+  transition: background-color 0.3s ease;
 }
 
 .button-enviar:hover {
@@ -289,9 +346,32 @@ holder {
 
 /* Responsive: en pantallas pequeñas, cambiar a columna única */
 @media (max-width: 768px) {
-  .contacto-superior, .contactos-inferior {
+  .contacto-superior {
     flex-direction: column;
     gap: 20px;
+  }
+  
+  .formulario p {
+    flex-direction: column;
+  }
+  
+  .formulario p label {
+    margin-bottom: 5px;
+  }
+  
+  .button-enviar {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .imagen-contacto {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  
+  .enlace-cadenas a {
+    font-size: 16px;
+    padding: 10px 20px;
   }
 }
 
