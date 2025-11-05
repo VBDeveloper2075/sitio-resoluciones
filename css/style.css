@@ -212,15 +212,35 @@ holder {
 }
 
 /* --------  SECCION CONTACTO -------- */
-.contacto {
+/* Sección superior: 2 columnas (formulario + vías de comunicación) */
+.contacto-superior {
   display: flex;
-  gap: 24px;
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
-.contacto div {
+.formulario-contacto, .datos {
+  flex: 1;
+}
+
+/* Sección inferior: 3 columnas (imagen + contactos + novedades) */
+.contactos-inferior {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.imagen-contacto, .bienvenidos, .novedades {
+  flex: 1;
+}
+
+.imagen-contacto img {
   width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
+/* Estilos existentes mantenidos */
 .datos p {
   font-size: 14px;
 }
@@ -240,13 +260,11 @@ holder {
 .formulario p input, .formulario p textarea {
   width: 100%;
   background: #ddd;
-  border-radius: 5p;
+  border-radius: 5px;
   border: 1px solid #999;
   font-size: 14px;
   padding: 6px 10px;
 }
-
-/* para que no se agrande de cualquier forma el textarea lo limito y cuando se pasa del borde aparece el scroll por defecto y se puede seguir escribiendo igual */
 
 .formulario textarea{
   resize: none;
@@ -267,6 +285,14 @@ holder {
 
 .button-enviar:hover {
   background-color: #595997;
+}
+
+/* Responsive: en pantallas pequeñas, cambiar a columna única */
+@media (max-width: 768px) {
+  .contacto-superior, .contactos-inferior {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 
