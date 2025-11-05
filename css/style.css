@@ -216,27 +216,27 @@ holder {
 }
 
 /* --------  SECCION CONTACTO -------- */
-/* Sección superior: 2 columnas (formulario + vías de comunicación) */
-.contacto-superior {
+/* Sección: 3 columnas iguales */
+.tres-columnas {
   display: flex;
-  gap: 30px;
-  margin-bottom: 40px;
+  gap: 20px;
+  align-items: flex-start;
 }
 
-.formulario-contacto, .datos {
+.formulario-contacto, .datos, .imagen-y-enlace {
   flex: 1;
+  min-height: 500px;
 }
 
-/* Sección inferior: imagen centrada */
-.contactos-inferior {
+/* Estilos para la tercera columna (imagen + enlace) */
+.imagen-y-enlace {
   display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .imagen-contacto {
-  max-width: 500px;
-  width: 100%;
+  margin-bottom: 20px;
 }
 
 .imagen-contacto img {
@@ -246,11 +246,10 @@ holder {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Enlace a cadenas centrado */
+/* Enlace a cadenas */
 .enlace-cadenas {
   text-align: center;
-  margin: 30px 0;
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .enlace-cadenas p {
@@ -260,13 +259,15 @@ holder {
 .enlace-cadenas a {
   color: #7f7fd5;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
-  padding: 12px 30px;
+  padding: 12px 20px;
   border: 2px solid #7f7fd5;
   border-radius: 8px;
   display: inline-block;
   transition: all 0.3s ease;
+  width: 80%;
+  box-sizing: border-box;
 }
 
 .enlace-cadenas a:hover {
@@ -346,9 +347,13 @@ holder {
 
 /* Responsive: en pantallas pequeñas, cambiar a columna única */
 @media (max-width: 768px) {
-  .contacto-superior {
+  .tres-columnas {
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
+  }
+  
+  .formulario-contacto, .datos, .imagen-y-enlace {
+    min-height: auto;
   }
   
   .formulario p {
@@ -364,14 +369,21 @@ holder {
     width: 100%;
   }
   
-  .imagen-contacto {
-    max-width: 100%;
-    padding: 0 20px;
+  .enlace-cadenas a {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+/* Responsive para tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .tres-columnas {
+    gap: 15px;
   }
   
   .enlace-cadenas a {
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 14px;
+    padding: 10px 15px;
   }
 }
 
