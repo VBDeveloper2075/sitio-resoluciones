@@ -23,43 +23,27 @@
     </header>
     <nav>
       <ul class="holder">
-        <li><a class="activo" href="index.html">Inicio</a></li>
-        <li><a href="resoluciones.html">Resoluciones</a></li>
-        <li><a href="disposiciones.html">Disposiciones</a></li>
+        <li><a class="activo" href="index.html">Designaciones</a></li>
+        <li><a href="resoluciones.html">MAD y Acrecentamiento</a></li>
+        <li><a href="disposiciones.html">Renuncias</a></li>
         <li><a href="utiles.html">Recursos</a></li>
       </ul>
     </nav>
     <main class="holder">
-      <div>
-        <img src="./img/laptop.jpg" alt="avion" />
-      </div>
-    <div class="contactos">
-      <section class="bienvenidos">
-        <h2>
-          Contactos de Interés
-        </h2>
-        <dl>
-          <dt>Correo electrónico</dt>
-          <dd>sad117@abc.gob.ar</dd>
-          <dt>Jubilaciones</dt>
-          <dd>jubilaciones117@abc.gob.ar</dd>
-          <dt>Actos Públicos</dt>
-          <dd>apdsad117@abc.gob.ar</dd>
-          <dt>Inscripciones</dt>
-          <dd>sad117listados@abc.gob.ar</dd>
-          <dd>listado 108A y 108B INFINE</dd>
-        </dl>
-      </section>
-      <section class="novedades">
-        <h2>Novedades</h2>
-        <div class="consultanos">
-          <p>Nuevo Teléfono: 2195-4650</p>
-          <span class="cita">Consultanos</span>
-          <span class="autor">consultas117sad@gmail.com</span>
+      <h2 class="reso">Aquí puede ver y descargar sus Designaciones</h2>
+      <div class="cuil">
+        <input type="number" id="dniInput" placeholder="Ingrese su DNI" />
+        <div id="dniMessage" style="display: none">
+          Por favor, ingrese un DNI válido de 7 u 8 dígitos.
         </div>
-      </section>
-    </div>
-  </main>
+        <div class="button-container">
+          <button onclick="validarDNI()">Buscar</button>
+          <button onclick="resetearFormulario()">Reset</button>
+        </div>
+        <div id="resultado"></div>
+      </div>
+      
+    </main>
     <footer>
       <p>
         &copy; 2024 - Todos los derechos reservados -
