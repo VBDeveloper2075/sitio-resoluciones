@@ -85,10 +85,6 @@ nav ul li a.active {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-nav ul li a.activo {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
 /* --------  SECCION INICIO Home -------- */
 
 .bienvenidos {
@@ -216,94 +212,21 @@ holder {
 }
 
 /* --------  SECCION CONTACTO -------- */
-/* Sección: 3 columnas iguales */
-.tres-columnas {
+.contacto {
   display: flex;
-  gap: 20px;
-  align-items: flex-start;
+  gap: 24px;
 }
 
-.formulario-contacto, .datos, .imagen-y-enlace {
-  flex: 1;
-  min-height: 500px;
-}
-
-/* Estilos para la tercera columna (imagen + enlace) */
-.imagen-y-enlace {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.imagen-contacto {
-  margin-bottom: 20px;
-}
-
-.imagen-contacto img {
+.contacto div {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Enlace a cadenas */
-.enlace-cadenas {
-  text-align: center;
-  padding: 20px 0;
-}
-
-.enlace-cadenas p {
-  margin: 0;
-}
-
-.enlace-cadenas a {
-  color: #7f7fd5;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 12px 20px;
-  border: 2px solid #7f7fd5;
-  border-radius: 8px;
-  display: inline-block;
-  transition: all 0.3s ease;
-  width: 80%;
-  box-sizing: border-box;
-}
-
-.enlace-cadenas a:hover {
-  background-color: #7f7fd5;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(127, 127, 213, 0.3);
-}
-
-/* Mejoras en los estilos existentes */
 .datos p {
   font-size: 14px;
-  margin-bottom: 15px;
-}
-
-.datos ul {
-  list-style: none;
-  padding: 0;
 }
 
 .datos ul li {
   font-size: 13px;
-  margin-bottom: 8px;
-  padding-left: 15px;
-  position: relative;
-}
-
-.datos ul li::before {
-  content: "✉";
-  position: absolute;
-  left: 0;
-  color: #7f7fd5;
-}
-
-.datos ul li strong {
-  color: #555;
 }
 
 .formulario p {
@@ -317,11 +240,13 @@ holder {
 .formulario p input, .formulario p textarea {
   width: 100%;
   background: #ddd;
-  border-radius: 5px;
+  border-radius: 5p;
   border: 1px solid #999;
   font-size: 14px;
   padding: 6px 10px;
 }
+
+/* para que no se agrande de cualquier forma el textarea lo limito y cuando se pasa del borde aparece el scroll por defecto y se puede seguir escribiendo igual */
 
 .formulario textarea{
   resize: none;
@@ -338,53 +263,10 @@ holder {
   cursor: pointer;
   box-sizing: border-box;
   margin-left: 80px;
-  transition: background-color 0.3s ease;
 }
 
 .button-enviar:hover {
   background-color: #595997;
-}
-
-/* Responsive: en pantallas pequeñas, cambiar a columna única */
-@media (max-width: 768px) {
-  .tres-columnas {
-    flex-direction: column;
-    gap: 30px;
-  }
-  
-  .formulario-contacto, .datos, .imagen-y-enlace {
-    min-height: auto;
-  }
-  
-  .formulario p {
-    flex-direction: column;
-  }
-  
-  .formulario p label {
-    margin-bottom: 5px;
-  }
-  
-  .button-enviar {
-    margin-left: 0;
-    width: 100%;
-  }
-  
-  .enlace-cadenas a {
-    width: 100%;
-    font-size: 16px;
-  }
-}
-
-/* Responsive para tablets */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .tres-columnas {
-    gap: 15px;
-  }
-  
-  .enlace-cadenas a {
-    font-size: 14px;
-    padding: 10px 15px;
-  }
 }
 
 
