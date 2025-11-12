@@ -88,7 +88,7 @@ nav ul li a.active {
 /* --------  SECCION INICIO Home -------- */
 
 .bienvenidos {
-  width: 75%;
+  /* ancho controlado por layout (flex/grid) */
   padding: 20px;
   box-sizing: border-box;
 }
@@ -102,7 +102,6 @@ nav ul li a.active {
 
 .novedades {
   background-color: #f2e3f0;
-  width: 25%;
   padding: 16px;
 }
 
@@ -155,10 +154,25 @@ footer {
   margin-top: 20px;
 }
 
-holder {
+.holder {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+/* Centrado y ancho máximo para contenedores principales */
+.holder {
+  max-width: 1200px;
+  width: 92%;
+  margin: 0 auto;
+}
+
+/* Recursos: que use todo el ancho en desktop grande */
+.recursos.holder {
+  max-width: none;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 /* --------  hoja RESOLUCIONES -------- */
@@ -211,14 +225,97 @@ holder {
   background-color: #595997;
 }
 
-/* --------  SECCION CONTACTO -------- */
-.contacto {
-  display: flex;
-  gap: 24px;
+/* --------  SECCION RECURSOS (Grid) -------- */
+.recursos {
+  display: block;
 }
 
-.contacto div {
+.recursos h2 {
+  text-align: center;
+}
+.recursos .bienvenidos,
+.recursos .novedades {
+  width: auto;
+}
+
+.recursos-grid-top,
+.recursos-grid-bottom {
+  display: grid;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Mobile por defecto: 1 columna */
+.recursos-grid-top {
+  grid-template-columns: 1fr;
+  margin-bottom: 32px;
+}
+
+.recursos-grid-bottom {
+  grid-template-columns: 1fr;
+}
+
+/* Centrado en mobile y tablet */
+@media (max-width: 1279px) {
+  .recursos-grid-top,
+  .recursos-grid-bottom {
+    justify-items: center;
+  }
+  .recursos-grid-top > *,
+  .recursos-grid-bottom > * {
+    width: 100%;
+  }
+}
+
+/* Tablet: dos columnas arriba, dos columnas abajo (con imagen ocupando toda la fila si no hay espacio) */
+@media (min-width: 600px) {
+  .recursos-grid-top {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .recursos-grid-bottom {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Desktop grande (>=1280px): dos columnas ocupando todo el ancho */
+@media (min-width: 1280px) {
+  .recursos-grid-top {
+    grid-template-columns: 1fr 1fr; /* dos columnas arriba */
+  }
+  .recursos-grid-bottom {
+    grid-template-columns: 1fr 1fr; /* dos columnas abajo */
+  }
+}
+
+/* Tarjetas y elementos internos */
+.recurso-imagen img {
   width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+.novedades {
+  background-color: #f2e3f0;
+  padding: 16px;
+  border-radius: 6px;
+}
+
+.bienvenidos,
+.datos,
+.contacto-rapido {
+  padding: 16px;
+  background: #fff;
+  border-radius: 6px;
+}
+
+.datos p {
+  font-size: 14px;
+}
+
+.datos ul li {
+  font-size: 13px;
 }
 
 .datos p {
@@ -262,7 +359,7 @@ holder {
   font-size: 16px;
   cursor: pointer;
   box-sizing: border-box;
-  margin-left: 80px;
+  margin-left: 0;
 }
 
 .button-enviar:hover {
