@@ -238,62 +238,80 @@ footer {
   width: auto;
 }
 
-.recursos-grid-top,
-.recursos-grid-bottom {
+.recursos-grid-top {
   display: grid;
   gap: 24px;
   align-items: start;
-}
-
-/* Mobile por defecto: 1 columna */
-.recursos-grid-top {
   grid-template-columns: 1fr;
   margin-bottom: 32px;
 }
 
-.recursos-grid-bottom {
-  grid-template-columns: 1fr;
-}
-
-/* Centrado en mobile y tablet */
-@media (max-width: 1279px) {
-  .recursos-grid-top,
-  .recursos-grid-bottom {
-    justify-items: center;
-  }
-  .recursos-grid-top > *,
-  .recursos-grid-bottom > * {
-    width: 100%;
-  }
-}
-
-/* Tablet: dos columnas arriba, dos columnas abajo (con imagen ocupando toda la fila si no hay espacio) */
+/* Tablet y Desktop: dos columnas arriba */
 @media (min-width: 600px) {
   .recursos-grid-top {
     grid-template-columns: 1fr 1fr;
   }
-
-  .recursos-grid-bottom {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
-/* Desktop grande (>=1280px): dos columnas ocupando todo el ancho */
-@media (min-width: 1280px) {
-  .recursos-grid-top {
-    grid-template-columns: 1fr 1fr; /* dos columnas arriba */
-  }
-  .recursos-grid-bottom {
-    grid-template-columns: 1fr 1fr; /* dos columnas abajo */
-  }
+/* Imagen centrada */
+.imagen-centrada {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
 }
 
-/* Tarjetas y elementos internos */
-.recurso-imagen img {
+.imagen-centrada img {
+  max-width: 500px;
   width: 100%;
   height: auto;
-  display: block;
-  border-radius: 6px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección de cadenas centrada */
+.seccion-cadenas {
+  text-align: center;
+  margin: 30px 0;
+  padding: 20px;
+}
+
+.seccion-cadenas .linkcadenas {
+  margin: 0;
+}
+
+.seccion-cadenas .linkcadenas a {
+  color: #7f7fd5;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 30px;
+  border: 2px solid #7f7fd5;
+  border-radius: 8px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.seccion-cadenas .linkcadenas a:hover {
+  background-color: #7f7fd5;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(127, 127, 213, 0.3);
+}
+
+/* Responsive para imagen */
+@media (max-width: 768px) {
+  .imagen-centrada {
+    margin: 30px 20px;
+  }
+  
+  .imagen-centrada img {
+    max-width: 100%;
+  }
+  
+  .seccion-cadenas .linkcadenas a {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
 }
 
 .novedades {
